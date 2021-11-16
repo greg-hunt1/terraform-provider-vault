@@ -77,6 +77,8 @@ The following arguments are supported:
 
 * `oracle` - (Optional) A nested block containing configuration options for Oracle connections.
 
+* `redshift` - (Optional) A nested block containing configuration options for Redshift connections.
+
 * `elasticsearch` - (Optional) A nested block containing configuration options for Elasticsearch connections.
 
 * `snowflake` - (Optional) A nested block containing configuration options for Snowflake connections.
@@ -209,6 +211,22 @@ See the [Vault
 * `username_template` - (Optional) For Vault v1.7+. The template to use for username generation.
 See the [Vault
   docs](https://www.vaultproject.io/docs/concepts/username-templating)
+
+### Redshift Configuration Options
+
+* `connection_url` - (Required) A URL containing connection information. See
+  the [Vault
+  docs](https://www.vaultproject.io/api-docs/secret/databases/redshift.html#sample-payload)
+  for an example.
+
+* `max_open_connections` - (Optional) The maximum number of open connections to
+  use.
+
+* `max_idle_connections` - (Optional) The maximum number of idle connections to
+  maintain.
+
+* `max_connection_lifetime` - (Optional) The maximum number of seconds to keep
+  a connection alive for.
 
 ### Oracle Configuration Options
 
